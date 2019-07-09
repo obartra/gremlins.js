@@ -14,6 +14,7 @@ module.exports = {
   resolve: {
     extensions: [".ts"]
   },
+  devtool: "source-map",
   output: {
     filename: "gremlins.min.js",
     publicPath: "http://localhost:8080/",

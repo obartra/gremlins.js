@@ -21,6 +21,7 @@ export const gremlins: {
   strategies: {
     [key: string]: CustomStrategy;
   };
+  createHorde: () => GremlinsHorde;
 } = {
   species: {
     clicker,
@@ -38,13 +39,12 @@ export const gremlins: {
     allTogether,
     bySpecies,
     distribution
-  }
+  },
+  /**
+   * Get a new horde instance
+   */
+  createHorde: () => new GremlinsHorde()
 };
-/**
- * Get a new horde instance
- */
-// @ts-ignore
-gremlins.createHorde = () => new GremlinsHorde();
 
 /**
  * gremlins.js 0.1.0 Copyright (c) 2014, marmelab

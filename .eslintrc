@@ -1,0 +1,23 @@
+{
+  "extends": "eslint:recommended",
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true
+  },
+  "overrides": [
+    {
+      "files": "webpack.config.js",
+      "env": {
+        "browser": false,
+        "node": true
+      }
+    }
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-prototype-builtins": 0
+  }
+}

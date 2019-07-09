@@ -313,10 +313,10 @@ export function toucher() {
     gesture(position, element, done) {
       const gesture: Gesture = {
         distanceX: config.randomizer
-          ? config.randomizer.integer({ min: -100, max: 200 })
+          ? config.randomizer.integer({ min: 0, max: 300 }) - 100
           : 0,
         distanceY: config.randomizer
-          ? config.randomizer.integer({ min: -100, max: 200 })
+          ? config.randomizer.integer({ min: 0, max: 300 }) - 100
           : 0,
         duration: config.randomizer
           ? config.randomizer.integer({ min: 20, max: 500 })
@@ -342,16 +342,16 @@ export function toucher() {
           ? config.randomizer.floating({ min: 0, max: 2 })
           : 0,
         rotation: config.randomizer
-          ? config.randomizer.natural({ min: -100, max: 100 })
+          ? config.randomizer.natural({ min: 0, max: 200 }) - 100
           : 0,
         radius: config.randomizer
           ? config.randomizer.integer({ min: 50, max: 200 })
           : 0,
         distanceX: config.randomizer
-          ? config.randomizer.integer({ min: -20, max: 20 })
+          ? config.randomizer.integer({ min: 0, max: 40 }) - 20
           : 0,
         distanceY: config.randomizer
-          ? config.randomizer.integer({ min: -20, max: 20 })
+          ? config.randomizer.integer({ min: 0, max: 40 }) - 20
           : 0,
         duration: config.randomizer
           ? config.randomizer.integer({ min: 100, max: 1500 })

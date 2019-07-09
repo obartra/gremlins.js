@@ -1,16 +1,22 @@
 {
   "name": "gremlins-ts",
-  "version": "0.2.0-beta.1",
+  "version": "0.2.4",
   "description": "A monkey testing library written in JavaScript, for Node.js and the browser. Use it to check the robustness of web applications by unleashing a horde of undisciplined gremlins.",
-  "main": "dist/gremlins.min.js",
-  "directories": {
-    "example": "examples"
-  },
+  "main": "dist/gremlins.min",
+  "types": "dist/index",
   "scripts": {
-    "format": "prettier --write {src/**/*.ts,webpack.config.js}",
+    "format": "prettier --write {src/**/*.ts,webpack.config.js} && eslint --fix src/**/*.ts",
     "types": "tsc --noEmit",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "prepublishOnly": "yarn format && yarn build"
   },
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "src",
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/marmelab/gremlins.js.git"
@@ -32,6 +38,7 @@
     "@babel/core": "^7.5.0",
     "@babel/preset-env": "^7.5.2",
     "@babel/preset-typescript": "^7.3.3",
+    "@typescript-eslint/parser": "^1.11.0",
     "eslint": "^6.0.1",
     "prettier": "^1.18.2",
     "ts-loader": "^6.0.4",
