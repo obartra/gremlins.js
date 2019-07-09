@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "module": "commonjs",
+    "strict": true,
+    "removeComments": true,
+    "sourceMap": true
+  },
+  "include": ["src/*"]
+}
